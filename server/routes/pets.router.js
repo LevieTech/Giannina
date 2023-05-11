@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
     if(req.isAuthenticated()) {
         // ! User is logged in
         console.log('user', req.user);
+        let parameters =[req.res]
         let queryText = `SELECT * FROM "pets" WHERE "user_id" = $1;`;
         // ! DO NOT pass the user id from the client for data that 
         // ! requires authentication.
