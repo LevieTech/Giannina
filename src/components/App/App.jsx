@@ -19,7 +19,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-
+import Flight from '../Flight/Flight';
 import './App.css';
 
 function App() {
@@ -110,6 +110,15 @@ function App() {
             }
           </Route>
 
+              <Route
+              exact path="/flight">
+              {user.id ?
+              <Redirect to="/user" />
+              :
+              <Flight></Flight>
+            }
+              
+              </Route>
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
             <h1>404</h1>
