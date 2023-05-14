@@ -115,7 +115,7 @@ function App() {
               {user.id ?
               <Redirect to="/user" />
               :
-              <Flight></Flight>
+              <Flight />
             }
               
               </Route>
