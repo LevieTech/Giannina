@@ -32,7 +32,7 @@ CREATE TABLE home_page (
     img_translator VARCHAR,
     img_guest INTEGER,
     img_bed INTEGER,
-    FOREIGN KEY (img_flight) REFERENCES flight_info (id),
+    FOREIGN KEY (img_flight) REFERENCES flight (id),
     FOREIGN KEY (img_suitcase) REFERENCES suitcase (id),
     FOREIGN KEY (img_question) REFERENCES questions (id),
     FOREIGN KEY (img_guest) REFERENCES guest_info (id),
@@ -45,7 +45,7 @@ CREATE TABLE guest_info (
     guest_name VARCHAR
 );
 
-CREATE TABLE flight_info (
+CREATE TABLE flight (
     id SERIAL PRIMARY KEY,
     gues_name VARCHAR,
     flight_date DATE,

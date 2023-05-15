@@ -1,9 +1,16 @@
 // Import required modules
 const express = require("express");
 const pool = require("../modules/pool");
-
-// Create an Express router object
 const router = express.Router();
+// Create an Express router object
+
+
+router.
+
+
+
+
+
 
 // Define a GET route
 router.get("/", (req, res) => {
@@ -22,6 +29,7 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
     const flightData = req.body;
+    const user = req.user.id
     const { guestName, departureDate, arrivalDate, fromCity, toCity, airline, flightNumber } = flightData;
   
     const queryText = `
@@ -51,7 +59,7 @@ router.post("/", (req, res) => {
 
 // Export the router object
 module.exports = router;
-// This is a basic example, and you would need to replace table_name with the actual name of the table you want to retrieve data from. Additionally, you could add filters to the SELECT query to retrieve specific data. Finally, you may need to handle error cases and edge cases based on your specific needs.
+
 
 
 
