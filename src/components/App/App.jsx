@@ -15,7 +15,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-import Flight from '../Flight/Flight';
+import Flight from '../Flight/Flight.jsx';
 import './App.css';
 
 function App() {
@@ -32,7 +32,6 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/home" />
 
           {/* Visiting localhost:3000/about will show the about page. */}
