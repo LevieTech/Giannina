@@ -36,10 +36,10 @@ function Nav() {
               Info Page
             </Link>
             
-            
-            <Link className="navLink" to="/flight">
-              Flight
+            <Link className="navLink" to="/my_trips">
+              My trips
             </Link>
+            
 
 
 
