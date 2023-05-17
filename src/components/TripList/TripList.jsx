@@ -3,13 +3,15 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 
-function MyTrips () {
+
+function TripList () {
+    // const { tripUser } = useSelector((store)=> store.trip);
     const dispatch = useDispatch();
-    const trips = useSelector((store) => store.trips);
+    const user = useSelector((store) => store.user);
 
-
+   
   useEffect(() => {
-    dispatch({ type: "FETCH_MOVIES" });
+    dispatch({ type: "" });
   }, []);
     
     
@@ -36,6 +38,6 @@ function MyTrips () {
 
     )
 }
-export default MyTrips
+export default TripList;
 
 

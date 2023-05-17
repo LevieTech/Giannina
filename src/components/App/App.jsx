@@ -15,7 +15,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-import MyTrips from '../MyTrips/MyTrips';
+import TripList from '../TripList/TripList';
 import './App.css';
 
 function App() {
@@ -111,7 +111,7 @@ function App() {
           >
             
               
-              <MyTrips/>
+              <TripList/>
            
           </ProtectedRoute>
 
