@@ -28,16 +28,10 @@ CREATE TABLE "entry" (
 "entry_text" VARCHAR
 "created_at" TIMESTAMP
 );
--- "entry": info that a user writes about a specific trip. each entry has an "id" number, and 
--- "user_id":the id of the user who wrote the entry and a:
--- "trip_id": the id of the trip the entry is related to
--- "category_id": the id of the category the entry belongs to 
--- "entry_text": the actual content of the entry
--- "created_at": date and time of when the entry was created
--- each entry is associated w a user bc it has a user id that corresponds to the id of the user who wrote the entry
--- each entry is associated with a trip through trip id. this connection indicates which trip the entry is related to.
--- entries are connected to categories through category id .This allows users to assign a category to each entry indicating its topic. Users can choose from existing categories or create new ones. 
--- The user id in the trip table links each trip to the corresponding user. This connection establishes which user took a spesific trip
+-- "category": way to group entries based on their type. Each category has:
+-- "id": unique number
+-- "type": NAME for the category EX: flightinfo
+-- categories help organize entries so that users can easily find or filter entries based on specific topics or interests
 
 
 CREATE TABLE "category"(
@@ -107,3 +101,51 @@ CREATE TABLE "pets" (
 --     FOREIGN KEY (img_guest) REFERENCES guest_info (id),
 --     FOREIGN KEY (img_bed) REFERENCES lodge (id)
 -- );
+
+CREATE TABLE CSV (
+  id serial,
+  CSV text
+);
+
+CREATE TABLE ages (
+  id SERIAL PRIMARY KEY,
+  gender VARCHAR(10),
+  range VARCHAR(20),
+  count INTEGER,
+  type VARCHAR(20)
+);
+
+CREATE TABLE locations (
+  id SERIAL PRIMARY KEY,
+  neighborhood VARCHAR(255),
+  city VARCHAR(255),
+  count INTEGER,
+  type VARCHAR(255)
+);
+
+CREATE TABLE prescriptions (
+  id SERIAL PRIMARY KEY,
+ name VARCHAR (255),
+ count INT,
+ type VARCHAR(255)
+);
+
+CREATE TABLE  patients_unique (
+id SERIAL PRIMARY KEY, 
+count INT
+); 
+
+CREATE TABLE pantients_visits(
+id SERIAL,
+count INTEGER,
+type VARCHAR(255),
+ );
+
+CREATE TABLE family_size (
+  id SERIAL 
+  range VARCHAR(255),
+  count INTEGER,
+  type VARCHAR(255),
+);
+
+

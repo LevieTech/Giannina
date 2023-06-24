@@ -4,13 +4,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
-
+    <script src="echarts.js"></script>
     <title>App</title>
   </head>
   <body>
+    <!-- Prepare a DOM with a defined width and height for ECharts -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+
+    <script>
+      // Your ECharts configuration and data
+      var ageGenderOption = {
+        title: {
+          text: 'Age Distribution by Gender'
+        },
+        tooltip: {},
+        legend: {
+          data: ['Male', 'Female']
+        },
+        xAxis: {
+          data: ['0-10', '11-20', '21-30', '31-40', '41-50', '51-60', '61-70', '71+']
+        },
+        yAxis: {},
+        series: [
+          {
+            name: 'Male',
+            type: 'bar',
+            stack: 'gender',
+            itemStyle: { color: 'red' },
+            data: [120, 200, 150, 80, 70, 110, 130, 100]
+          },
+          {
+            name: 'Female',
+            type: 'bar',
+            stack: 'gender',
+            itemStyle: { color: 'gold' },
+            data: [220, 182, 191, 234, 290, 330, 310, 220]
+          }
+        ]
+      };
+
+      // Initialize ECharts instance and set the chart options
+      var myChart = echarts.init(document.getElementById('main'), 'dark');
+      myChart.setOption(ageGenderOption);
+    </script>
+
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="react-root"></div>
   </body>
 </html>
+
