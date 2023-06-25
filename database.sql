@@ -141,11 +141,17 @@ count INTEGER,
 type VARCHAR(255),
  );
 
+
+
 CREATE TABLE family_size (
   id SERIAL 
   range VARCHAR(255),
   count INTEGER,
   type VARCHAR(255),
 );
-
+INSERT INTO family_size (range, count, type) VALUES
+  ('1-2', 100, 'Nuclear'),
+  ('3-4', 80, 'Nuclear'),
+  ('5-6', 50, 'Extended'),
+  ('7+', 20, 'Extended');
 
