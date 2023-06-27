@@ -14,6 +14,9 @@ import TripList from '../TripList/TripList';
 import './App.css';
 import MyChart from '../MyChart/echarts';
 import FamilySize from '../FamilySize/familySize';
+import Patients from '../Patients/Patients';
+
+
 
 function App() {
   const dispatch = useDispatch();
@@ -54,13 +57,25 @@ function App() {
           <ProtectedRoute exact path="/user" component={UserPage} />
           <ProtectedRoute exact path="/info" component={InfoPage} />
           <ProtectedRoute exact path="/my_trips" component={TripList} />
-          <Route exact path="/echarts">
-            <MyChart />
-          </Route>
+          <ProtectedRoute exact path="/echarts" component={MyChart} />
+
           <Route exact path="/family_size">
             <FamilySize />
           </Route>
+
+          <Route exact path="/patients">
+            <Patients/>
+          </Route> 
+
+
+
           <Route>
+
+
+
+
+
+
             <h1>404 - Page Not Found</h1>
           </Route>
         </Switch>

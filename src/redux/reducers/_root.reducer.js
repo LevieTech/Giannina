@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import errors from './errors.reducer';
 import user from './user.reducer';
 import familySize from './familySize.reducer';
+import patients from './patients.reducer';
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
 // This is imported in index.js as rootSaga
@@ -11,7 +12,10 @@ import familySize from './familySize.reducer';
 const rootReducer = combineReducers({
   errors, // contains registrationMessage and loginMessage
   user,
-  familySize, // will have an id and username if someone is logged in
+  familySize,
+  patients,
+ 
+  // will have an id and username if someone is logged in
   
 });
 

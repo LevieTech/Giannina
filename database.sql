@@ -130,16 +130,84 @@ CREATE TABLE prescriptions (
  type VARCHAR(255)
 );
 
+
+
+
+
+
 CREATE TABLE  patients_unique (
 id SERIAL PRIMARY KEY, 
 count INT
 ); 
+
+INSERT INTO patients_unique (count) VALUES
+  (100),
+  (150),
+  (200),
+  (80),
+  (120);
+ALTER TABLE patients_unique
+ADD COLUMN visit_date DATE;
+-- Weekly count
+SELECT DATE_TRUNC('week', visit_date) AS week_start_date, COUNT(*) AS weekly_count
+FROM patients_unique
+GROUP BY week_start_date
+ORDER BY week_start_date;
+
+-- Quarterly count
+SELECT DATE_TRUNC('quarter', visit_date) AS quarter_start_date, COUNT(*) AS quarterly_count
+FROM patients_unique
+GROUP BY quarter_start_date
+ORDER BY quarter_start_date;
+
+-- Annual count
+SELECT DATE_TRUNC('year', visit_date) AS year_start_date, COUNT(*) AS annual_count
+FROM patients_unique
+GROUP BY year_start_date
+ORDER BY year_start_date;
+
+INSERT INTO patients_unique (count, visit_date) VALUES
+  (100, '2023-01-01'),
+  (150, '2023-01-10'),
+  (200, '2023-02-01'),
+  (80, '2023-03-15'),
+  (120, '2023-04-01');
+
+
+
+
+
+
+
 
 CREATE TABLE pantients_visits(
 id SERIAL,
 count INTEGER,
 type VARCHAR(255),
  );
+INSERT INTO patients_visits (count, type) VALUES
+  (50, 'New'),
+  (80, 'New'),
+  (30, 'Follow-up'),
+  (60, 'Follow-up'),
+  (40, 'Follow-up');
+
+ALTER TABLE patients_visits
+ADD COLUMN visit_time TIMESTAMP;
+
+INSERT INTO patients_visits (count, type, visit_time) VALUES
+  (50, 'New', '2023-06-26 10:30:00'),
+  (80, 'New', '2023-06-26 12:45:00'),
+  (30, 'Follow-up', '2023-06-26 14:15:00'),
+  (60, 'Follow-up', '2023-06-26 16:30:00'),
+  (40, 'Follow-up', '2023-06-26 18:00:00');
+
+SELECT DATE_TRUNC('week', visit_time) as week, SUM(count) as total_visits
+FROM patients_visits
+GROUP BY week
+ORDER BY week;
+
+
 
 
 

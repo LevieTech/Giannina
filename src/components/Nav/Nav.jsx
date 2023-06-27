@@ -31,6 +31,9 @@ function Nav() {
             <Link className="navLink" to="/family_size">
               Family Size
             </Link>
+            <Link className="navLink" to="/patients">
+              Patients
+            </Link>
             <Link className="navLink" to="/user">
               Home
             </Link>
@@ -53,6 +56,7 @@ function Nav() {
 }
 
 export default Nav;
+
 
 
 // import React from 'react';
