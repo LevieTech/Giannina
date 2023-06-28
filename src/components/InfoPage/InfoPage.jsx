@@ -1,12 +1,11 @@
+
+
+
+
+
+
+
 import React from 'react';
-
-
-
-
-
-
-
-    
 
 // This is one of our simplest components
 // It doesn't have local state

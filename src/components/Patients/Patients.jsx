@@ -121,7 +121,7 @@ export default Patients;
 
 
 
-
+// ! two charts different shades per pie 
 // import React, { useEffect } from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
 // import * as echarts from 'echarts';
@@ -254,7 +254,7 @@ export default Patients;
 
 
 
-
+//!differnt shades but white background
 // import React, { useEffect } from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
 // import * as echarts from 'echarts';
@@ -377,445 +377,7 @@ export default Patients;
 
 
 
-
-
-// import React, { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import * as echarts from 'echarts';
-
-// function Patients() {
-//   const dispatch = useDispatch();
-//   const { data, isLoading, error } = useSelector((state) => state.patients);
-
-//   useEffect(() => {
-//     dispatch({ type: 'FETCH_PATIENTS_REQUEST' });
-//   }, [dispatch]);
-
-//   useEffect(() => {
-//     if (data) {
-//       const chartDom = document.getElementById('main');
-//       const myChart = echarts.init(chartDom, 'dark'); // Set dark theme
-
-//       const processedData = processData(data);
-
-//       const option = {
-//         title: {
-//           text: 'Patients Visits',
-//         },
-//         tooltip: {},
-//         legend: {
-//           data: ['Weekly', 'Quarterly', 'Annual'],
-//         },
-//         series: [
-//           {
-//             name: 'Weekly',
-//             type: 'pie',
-//             radius: '30%',
-//             center: ['25%', '50%'],
-//             label: {
-//               formatter: '{b}: {c}',
-//             },
-//             data: processedData.weekly,
-//           },
-//           {
-//             name: 'Quarterly',
-//             type: 'pie',
-//             radius: '30%',
-//             center: ['50%', '50%'],
-//             label: {
-//               formatter: '{b}: {c}',
-//             },
-//             data: processedData.quarterly,
-//           },
-//           {
-//             name: 'Annual',
-//             type: 'pie',
-//             radius: '30%',
-//             center: ['75%', '50%'],
-//             label: {
-//               formatter: '{b}: {c}',
-//             },
-//             data: processedData.annual,
-//           },
-//         ],
-//       };
-
-//       myChart.setOption(option);
-//     }
-//   }, [data]);
-
-//   const processData = (data) => {
-//     const weeklyData = [];
-//     const quarterlyData = [];
-//     const annualData = [];
-
-//     // Process the data to populate the series data for each chart
-//     data.forEach((item) => {
-//       const period = item.period;
-//       const totalVisits = item.total_visits;
-
-//       weeklyData.push({
-//         name: period,
-//         value: totalVisits,
-//       });
-
-//       quarterlyData.push({
-//         name: period,
-//         value: totalVisits,
-//       });
-
-//       annualData.push({
-//         name: period,
-//         value: totalVisits,
-//       });
-//     });
-
-//     return {
-//       weekly: weeklyData,
-//       quarterly: quarterlyData,
-//       annual: annualData,
-//     };
-//   };
-
-//   if (isLoading) {
-//     return <div>Loading...</div>;
-//   }
-
-//   if (error) {
-//     return <div>Error loading data: {error}</div>;
-//   }
-
-//   return <div id="main" style={{ width: 600, height: 400 }} />;
-// }
-
-// export default Patients;
-
-
-
-// import React, { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import * as echarts from 'echarts';
-
-// function Patients() {
-//   const dispatch = useDispatch();
-//   const { data, isLoading, error } = useSelector((state) => state.patients);
-
-//   useEffect(() => {
-//     dispatch({ type: 'FETCH_PATIENTS_REQUEST' });
-//   }, [dispatch]);
-
-//   useEffect(() => {
-//     if (data) {
-//       const chartDom = document.getElementById('main');
-//       const myChart = echarts.init(chartDom, 'dark'); // Set dark theme
-
-//       const processedData = processData(data);
-
-//       const option = {
-//         title: {
-//           text: 'Patients Visits',
-//         },
-//         tooltip: {},
-//         legend: {
-//           data: ['Weekly', 'Quarterly', 'Annual'],
-//         },
-//         series: [
-//           {
-//             name: 'Weekly',
-//             type: 'pie',
-//             radius: '30%',
-//             center: ['25%', '50%'],
-//             label: {
-//               formatter: '{b}: {c}',
-//             },
-//             data: processedData.weekly,
-//           },
-//           {
-//             name: 'Quarterly',
-//             type: 'pie',
-//             radius: '30%',
-//             center: ['50%', '50%'],
-//             label: {
-//               formatter: '{b}: {c}',
-//             },
-//             data: processedData.quarterly,
-//           },
-//           {
-//             name: 'Annual',
-//             type: 'pie',
-//             radius: '30%',
-//             center: ['75%', '50%'],
-//             label: {
-//               formatter: '{b}: {c}',
-//             },
-//             data: processedData.annual,
-//           },
-//         ],
-//       };
-
-//       myChart.setOption(option);
-//     }
-//   }, [data]);
-
-//   const processData = (data) => {
-//     const weeklyData = [];
-//     const quarterlyData = [];
-//     const annualData = [];
-
-//     // Process the data to populate the series data for each chart
-//     data.forEach((item) => {
-//       const period = item.period;
-//       const totalVisits = item.total_visits;
-
-//       weeklyData.push({
-//         name: period,
-//         value: totalVisits,
-//       });
-
-//       quarterlyData.push({
-//         name: period,
-//         value: totalVisits,
-//       });
-
-//       annualData.push({
-//         name: period,
-//         value: totalVisits,
-//       });
-//     });
-
-//     return {
-//       weekly: weeklyData,
-//       quarterly: quarterlyData,
-//       annual: annualData,
-//     };
-//   };
-
-//   if (isLoading) {
-//     return <div>Loading...</div>;
-//   }
-
-//   if (error) {
-//     return <div>Error loading data: {error}</div>;
-//   }
-
-//   return <div id="main" style={{ width: 600, height: 400 }} />;
-// }
-
-// export default Patients;
-
-
-
-
-
-// import React, { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import * as echarts from 'echarts';
-
-// function Patients() {
-//   const dispatch = useDispatch();
-//   const { data, isLoading, error } = useSelector((state) => state.patients);
-
-//   useEffect(() => {
-//     dispatch({ type: 'FETCH_PATIENTS_REQUEST' });
-//   }, [dispatch]);
-
-//   useEffect(() => {
-//     if (data) {
-//       const chartDom = document.getElementById('main');
-//       const myChart = echarts.init(chartDom);
-
-//       const processedData = processData(data);
-
-//       const option = {
-//         title: {
-//           text: 'Patients Visits',
-//         },
-//         tooltip: {},
-//         legend: {
-//           data: ['Weekly', 'Quarterly', 'Annual'],
-//         },
-//         series: [
-//           {
-//             name: 'Weekly',
-//             type: 'pie',
-//             radius: '30%',
-//             center: ['25%', '50%'],
-//             label: {
-//               formatter: '{b}: {c}',
-//             },
-//             data: processedData.weekly,
-//           },
-//           {
-//             name: 'Quarterly',
-//             type: 'pie',
-//             radius: '30%',
-//             center: ['50%', '50%'],
-//             label: {
-//               formatter: '{b}: {c}',
-//             },
-//             data: processedData.quarterly,
-//           },
-//           {
-//             name: 'Annual',
-//             type: 'pie',
-//             radius: '30%',
-//             center: ['75%', '50%'],
-//             label: {
-//               formatter: '{b}: {c}',
-//             },
-//             data: processedData.annual,
-//           },
-//         ],
-//       };
-
-//       myChart.setOption(option);
-//     }
-//   }, [data]);
-
-//   const processData = (data) => {
-//     const weeklyData = [];
-//     const quarterlyData = [];
-//     const annualData = [];
-
-//     // Process the data to populate the series data for each chart
-//     data.forEach((item) => {
-//       const period = item.period;
-//       const totalVisits = item.total_visits;
-
-//       weeklyData.push({
-//         name: period,
-//         value: totalVisits,
-//       });
-
-//       quarterlyData.push({
-//         name: period,
-//         value: totalVisits,
-//       });
-
-//       annualData.push({
-//         name: period,
-//         value: totalVisits,
-//       });
-//     });
-
-//     return {
-//       weekly: weeklyData,
-//       quarterly: quarterlyData,
-//       annual: annualData,
-//     };
-//   };
-
-//   if (isLoading) {
-//     return <div>Loading...</div>;
-//   }
-
-//   if (error) {
-//     return <div>Error loading data: {error}</div>;
-//   }
-
-//   return <div id="main" style={{ width: 600, height: 400 }} />;
-// }
-
-// export default Patients;
-
-
-
-
-
-
-
-// import React, { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import * as echarts from 'echarts';
-
-// function Patients() {
-//   const dispatch = useDispatch();
-//   const { data, isLoading, error } = useSelector((state) => state.patients);
-
-//   useEffect(() => {
-//     dispatch({ type: 'FETCH_PATIENTS_REQUEST' });
-//   }, [dispatch]);
-
-//   useEffect(() => {
-//     if (data) {
-//       const chartDom = document.getElementById('main');
-//       const myChart = echarts.init(chartDom, 'dark');
-
-//       const option = {
-//         legend: {},
-//         tooltip: {
-//           trigger: 'axis',
-//           showContent: false
-//         },
-//         dataset: {
-//           source: [
-//             ['product', 'Yearly', 'Weekly', 'Quarterly'],
-//             ...data.map((item) => [item.period, item.yearly_visits, item.weekly_visits, item.quarterly_visits])
-//           ]
-//         },
-//         xAxis: { type: 'category' },
-//         yAxis: { gridIndex: 0 },
-//         grid: { top: '55%' },
-//         series: [
-//           {
-//             type: 'line',
-//             smooth: true,
-//             seriesLayoutBy: 'row',
-//             emphasis: { focus: 'series' }
-//           },
-//           {
-//             type: 'line',
-//             smooth: true,
-//             seriesLayoutBy: 'row',
-//             emphasis: { focus: 'series' }
-//           },
-//           {
-//             type: 'line',
-//             smooth: true,
-//             seriesLayoutBy: 'row',
-//             emphasis: { focus: 'series' }
-//           },
-//           {
-//             type: 'pie',
-//             id: 'pie',
-//             radius: '30%',
-//             center: ['50%', '25%'],
-//             emphasis: {
-//               focus: 'self'
-//             },
-//             label: {
-//               formatter: '{b}: {@Yearly} ({d}%)'
-//             },
-//             encode: {
-//               itemName: 'product',
-//               value: 'Yearly',
-//               tooltip: 'Yearly'
-//             }
-//           }
-//         ]
-//       };
-
-//       myChart.setOption(option);
-//     }
-//   }, [data]);
-
-//   if (isLoading) {
-//     return <div>Loading...</div>;
-//   }
-
-//   if (error) {
-//     return <div>Error loading data: {error}</div>;
-//   }
-
-//   return <div id="main" style={{ width: 900, height: 400 }} />;
-// }
-
-// export default Patients;
-
-
-
-
-
+//!
 
 
 
@@ -997,9 +559,6 @@ export default Patients;
 
 
 
-
-
-
 // import React, { useEffect } from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
 // import * as echarts from 'echarts';
@@ -1117,5 +676,246 @@ export default Patients;
 // }
 
 // export default Patients;
+
+//!left bar chart
+// import React, { useEffect, useState } from 'react';
+// import ReactECharts from 'echarts-for-react';
+
+// function FamilySize() {
+//   const [familySizeYearData, setFamilySizeYearData] = useState([]);
+
+//   useEffect(() => {
+//     // Simulated data for family size by year
+//     const yearData = [
+//       { range: '1-2', count: [50, 45, 35, 20] },
+//       { range: '3-4', count: [80, 65, 60, 40] },
+//       { range: '5-6', count: [65, 60, 45, 30] },
+//       { range: '7+', count: [95, 80, 70, 50] },
+//     ];
+
+//     setFamilySizeYearData(yearData);
+//   }, []);
+
+//   const familySizeYearOptions = {
+//     title: {
+//       text: 'Family Size by Year',
+//       textStyle: {
+//         color: '#ccc',
+//       },
+//     },
+//     xAxis: {
+//       type: 'value',
+//       axisLabel: {
+//         color: '#ccc',
+//       },
+//     },
+//     yAxis: {
+//       type: 'category',
+//       data: familySizeYearData.map((entry) => entry.range),
+//       axisLabel: {
+//         color: '#ccc',
+//       },
+//     },
+//     legend: {
+//       data: ['1-2', '3-4', '5-6', '7+'],
+//       textStyle: {
+//         color: '#ccc',
+//       },
+//     },
+//     series: familySizeYearData.map((entry) => ({
+//       name: entry.range,
+//       type: 'bar',
+//       data: entry.count,
+//       itemStyle: {
+//         color:
+//           entry.range === '1-2'
+//             ? 'red'
+//             : entry.range === '3-4'
+//             ? 'blue'
+//             : entry.range === '5-6'
+//             ? 'green'
+//             : 'yellow',
+//       },
+//     })),
+//     backgroundColor: '#222',
+//     textStyle: {
+//       color: '#ccc',
+//     },
+//   };
+
+//   return (
+//     <div>
+//       <div>
+//         <h2>Family Size </h2>
+//         <ReactECharts option={familySizeYearOptions} style={{ height: '400px' }} />
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default FamilySize;
+
+//! up and down displays number in bar 
+// import React, { useEffect, useState } from 'react';
+// import ReactApexChart from 'react-apexcharts';
+
+// function FamilySize() {
+//   const [familySizeYearData, setFamilySizeYearData] = useState([]);
+
+//   useEffect(() => {
+//     // Simulated data for family size by year
+//     const yearData = [
+//       { year: '2020', count: [50, 45, 35, 20] },
+//       { year: '2021', count: [80, 65, 60, 40] },
+//       { year: '2022', count: [65, 60, 45, 30] },
+//       { year: '2023', count: [95, 80, 70, 50] },
+//     ];
+
+//     setFamilySizeYearData(yearData);
+//   }, []);
+
+//   const familySizeYearOptions = {
+//     chart: {
+//       type: 'bar',
+//       background: '#222',
+//     },
+//     xaxis: {
+//       type: 'category',
+//       categories: familySizeYearData.map((entry) => entry.year),
+//       labels: {
+//         style: {
+//           colors: ['#ccc'],
+//         },
+//       },
+//     },
+//     yaxis: {
+//       labels: {
+//         style: {
+//           colors: ['#ccc'],
+//         },
+//       },
+//     },
+//     series: familySizeYearData.map((entry) => ({
+//       name: entry.year,
+//       data: entry.count,
+//     })),
+//     colors: ['#ff0000', '#0000ff', '#00ff00', '#ffd700'],
+//     fill: {
+//       type: 'solid',
+//     },
+//     legend: {
+//       position: 'top',
+//       labels: {
+//         colors: ['#ccc'],
+//       },
+//     },
+//     theme: {
+//       mode: 'dark',
+//     },
+//   };
+
+//   return (
+//     <div>
+//       <div>
+//         <h2>Family Size by Year</h2>
+//         <ReactApexChart options={familySizeYearOptions} series={familySizeYearOptions.series} type="bar" height={400} />
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default FamilySize;
+
+
+//! gradient left 
+// import React, { useEffect, useState } from 'react';
+// import ReactECharts from 'echarts-for-react';
+
+// function FamilySize() {
+//   const [familySizeYearData, setFamilySizeYearData] = useState([]);
+
+//   useEffect(() => {
+//     // Simulated data for family size by year
+//     const yearData = [
+//       { year: '2020', count: 50 },
+//       { year: '2021', count: 80 },
+//       { year: '2022', count: 65 },
+//       { year: '2023', count: 95 },
+//     ];
+
+//     setFamilySizeYearData(yearData);
+//   }, []);
+
+//   const familySizeYearOptions = {
+//     title: {
+//       text: 'Family Size by Year',
+//       textStyle: {
+//         color: '#ccc',
+//       },
+//     },
+//     yAxis: {
+//       type: 'category',
+//       data: familySizeYearData.map((entry) => entry.year),
+//       axisLabel: {
+//         color: '#ccc',
+//       },
+//     },
+//     xAxis: {
+//       type: 'value',
+//       axisLabel: {
+//         color: '#ccc',
+//       },
+//     },
+//     series: [
+//       {
+//         name: 'Family Size',
+//         data: familySizeYearData.map((entry) => entry.count),
+//         type: 'bar',
+//         itemStyle: {
+//           color: {
+//             type: 'linear',
+//             x: 0,
+//             y: 0,
+//             x2: 1,
+//             y2: 0,
+//             colorStops: [
+//               {
+//                 offset: 0,
+//                 color: 'red',
+//               },
+//               {
+//                 offset: 0.25,
+//                 color: 'green',
+//               },
+//               {
+//                 offset: 0.5,
+//                 color: 'blue',
+//               },
+//               {
+//                 offset: 1,
+//                 color: 'gold',
+//               },
+//             ],
+//           },
+//         },
+//       },
+//     ],
+//     backgroundColor: '#222',
+//     textStyle: {
+//       color: '#ccc',
+//     },
+//   };
+
+//   return (
+//     <div>
+//       <div>
+//         <h2>Family Size by Year</h2>
+//         <ReactECharts option={familySizeYearOptions} style={{ height: '400px' }} />
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default FamilySize;
 
 
