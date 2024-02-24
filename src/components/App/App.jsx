@@ -4,14 +4,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-import AboutPage from '../AboutPage/AboutPage';
+import HomePage from '../HomePage/HomePage';
 import UserPage from '../UserPage/UserPage';
-import InfoPage from '../InfoPage/InfoPage';
+import InfoPage from '../InfoPage/Bio';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 
 import './App.css';
+import BioPage from '../InfoPage/Bio';
 
 
 
@@ -29,7 +30,7 @@ function App() {
         <Nav />
         <Switch>
           <Redirect exact from="/" to="/home" />
-          <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/home" component={HomePage} />
           <Route exact path="/login">
             {user.id ? (
               <Redirect to="/user" />
@@ -52,7 +53,7 @@ function App() {
             )}
           </Route>
           <ProtectedRoute exact path="/user" component={UserPage} />
-          <ProtectedRoute exact path="/info" component={InfoPage} />
+          <ProtectedRoute exact path="/biopage" component={BioPage} />
          
   
           <Route>

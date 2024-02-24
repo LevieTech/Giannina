@@ -1,0 +1,28 @@
+.App-header {
+    background-color: #E6B397;
+    padding: 1em;
+    margin-bottom: .5em;
+    font-family: 'Dancing Script', cursive;
+    color: black;
+    display: flex;
+    width: 100%;
+    /* Center items vertically 
+     align-items: center; 
+    */
+  }
+  
+  .App-subtitle {
+    flex: .5; /* Take up 50% of the container */
+  }
+  
+  .avatar-image {
+    flex: .5;
+    width: 100px; /* Adjust the width of the image as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: auto; /* Push the image to the right */
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto; /* Center the container horizontally */
+  }

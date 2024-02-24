@@ -16,13 +16,15 @@ function Nav() {
       <div className="nav-title">
       <Avatar alt="Giannina" src="/images/Giannina.png" />
         <Link to="/home">
-          <h2>Coach Cochi</h2>
+          <h2>Coach
+            Giannina Cochina
+          </h2>
         </Link>
       </div>
       <div className="nav-links">
-        <Link to="/home">Home</Link>
-        <Link to="/info">Info Page</Link>
-        <Link to="/about">About</Link>
+        {/* <Link to="/home">Home</Link> */}
+        <Link to="/biopage">Bio</Link>
+        <Link to="/home">About</Link>
       </div>
     </div>
   );
