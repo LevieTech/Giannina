@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Button, TextField } from "@mui/material";
-import "./ContactG.css";
+
 
 function ContactG() {
   const dispatch = useDispatch();
