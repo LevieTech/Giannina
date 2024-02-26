@@ -13,6 +13,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 
 import './App.css';
 import BioPage from '../InfoPage/Bio';
+import ContactG from '../Contact/ContactG';
 
 
 
@@ -54,7 +55,7 @@ function App() {
           </Route>
           <ProtectedRoute exact path="/user" component={UserPage} />
           <ProtectedRoute exact path="/biopage" component={BioPage} />
-         
+          <ProtectedRoute exact path="/contactg" component={ContactG} />
   
           <Route>
 
