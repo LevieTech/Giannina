@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Button, TextField } from "@mui/material";
-
 
 function ContactG() {
   const dispatch = useDispatch();
-  
 
   const [formValues, setFormValues] = useState({
     name: "",
@@ -24,7 +22,7 @@ function ContactG() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch({ type: 'ADD_CONTACT', payload: { ...formValues, index: guestInfo.length } });
+    dispatch({ type: 'ADD_CONTACT', payload: { ...formValues } });
     setFormValues({
       name: '',
       phone: '',
@@ -56,8 +54,9 @@ function ContactG() {
       <form className='guest-form' onSubmit={handleSubmit}>
         <h1 style={{
           color: '',
-          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
-        }}>Lets Get Started!</h1>
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+          fontFamily: 'Dancing Script, cursive',
+        }}>Ready to take the first step towards a life of purpose, fulfillment, and abundance? Let's embark on this transformative journey together.Lets Get Started!</h1>
 
         <TextField
           name="name"
@@ -67,7 +66,7 @@ function ContactG() {
           required
           InputProps={{
             style: {
-              color: 'white',
+              color: '#6792DB',
               fontFamily: "Georgia",
               fontWeight: 'bolder',
               fontSize: '25px',
@@ -88,12 +87,12 @@ function ContactG() {
         <TextField
           name="phone"
           label="Phone"
-          value={formValues.name}
+          value={formValues.phone}
           onChange={handleChange}
           required
           InputProps={{
             style: {
-              color: 'white',
+              color: '#6792DB',
               fontFamily: "Georgia",
               fontWeight: 'bolder',
               fontSize: '25px',
@@ -114,12 +113,12 @@ function ContactG() {
         <TextField
           name="email"
           label="Email"
-          value={formValues.name}
+          value={formValues.email}
           onChange={handleChange}
           required
           InputProps={{
             style: {
-              color: 'white',
+              color: '#6792DB',
               fontFamily: "Georgia",
               fontWeight: 'bolder',
               fontSize: '25px',
@@ -140,12 +139,12 @@ function ContactG() {
         <TextField
           name="message"
           label="Message"
-          value={formValues.name}
+          value={formValues.message}
           onChange={handleChange}
           required
           InputProps={{
             style: {
-              color: 'white',
+              color: '#6792DB',
               fontFamily: "Georgia",
               fontWeight: 'bolder',
               fontSize: '25px',
@@ -163,7 +162,6 @@ function ContactG() {
           }}
         />
         <br />
-       
         
         <Button type="submit" variant="contained"
           style={{
@@ -175,8 +173,6 @@ function ContactG() {
           }}>
           Submit
         </Button>
-
-        
       </form>
     </>
   )
