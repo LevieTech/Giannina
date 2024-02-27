@@ -17,7 +17,7 @@ function Nav() {
       <Avatar alt="Giannina" src="/images/Giannina.png" />
         <Link to="/home">
           <h2>Coach
-            Giannina Cochina
+            Giannina 
           </h2>
         </Link>
       </div>
