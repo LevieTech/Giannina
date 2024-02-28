@@ -53,9 +53,9 @@ function App() {
               <LandingPage />
             )}
           </Route>
-          <ProtectedRoute exact path="/user" component={UserPage} />
-          <ProtectedRoute exact path="/biopage" component={BioPage} />
-          <ProtectedRoute exact path="/contactg" component={ContactG} />
+          <Route exact path="/user" component={UserPage} />
+          <Route exact path="/biopage" component={BioPage} />
+          <Route exact path="/contactg" component={ContactG} />
   
           <Route>
 
