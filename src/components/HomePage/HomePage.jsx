@@ -10,24 +10,21 @@ function HomePage() {
         </h2>
         <img className="avatar-image" src="/images/Giannina.png" alt="Giannina" />
       </header>
-
+      <br />
       {/* New section */}
       <section className="video-section">
         <center>
           <Typography variant="h3" gutterBottom>
-            VIDEO
+            My Links
           </Typography>
           <Typography variant="body1" gutterBottom>
             Coaching page info: <Link href="https://www.a-plancoaching.com/coach/giannina-hall/">https://www.a-plancoaching.com/coach/giannina-hall/</Link>
           </Typography>
-          <Typography variant="body1" gutterBottom>
-            Full coaches page: <Link href="https://www.a-plancoaching.com/coaches/">https://www.a-plancoaching.com/coaches/</Link>
-          </Typography>
           <Typography variant="body1">
-            You can also see a short video of me at the bottom of this page:
+            You can also watch a short video about myself!
           </Typography>
           <br/>
-          <iframe src="https://iplayerhd.com/player/video/ccf6398a-9518-4d61-871f-4f1ae03773f5"></iframe>
+          <iframe src="https://iplayerhd.com/player/video/ccf6398a-9518-4d61-871f-4f1ae03773f5" width="800" height="450"></iframe>
         </center>
       </section>
     </Container>
