@@ -6,30 +6,55 @@ import { Button, TextField } from "@mui/material";
 function ContactG() {
   const dispatch = useDispatch();
 
-  const [formValues, setFormValues] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
     message: "",
   });
 
+
+  const [errorMessage, setErrorMessage] = useState("");
+
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormValues((prevFormValues) => ({
+    setFormData((prevFormValues) => ({
       ...prevFormValues,
       [name]: value,
     }));
   };
 
-  const handleSubmit = (event) => {
+ 
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    dispatch({ type: 'ADD_CONTACT', payload: { ...formValues } });
-    setFormValues({
-      name: '',
-      phone: '',
-      email: '',
-      message: '',
-    });
+    try {
+      const response = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+      if (response.ok) {
+        console.log("Form submitted successfully");
+        setErrorMessage(""); // Clear any previous error message
+        // Clear form data after successful submission
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          message: ""
+        });
+      } else {
+        console.error("Error submitting form");
+        const errorData = await response.json();
+        setErrorMessage(errorData.message); // Display the error message to the user
+        console.error("Error submitting form");
+      }
+    } catch (error) {
+      console.error("Error submitting form", error);
+      setErrorMessage("An unexpected error occurred. Please try again later."); // Display a generic error message
+    }
   };
 
   return (
@@ -58,7 +83,7 @@ function ContactG() {
             <TextField
               name="name"
               label="Name"
-              value={formValues.name}
+              value={formData.name}
               onChange={handleChange}
               required
               inputProps={{
@@ -85,7 +110,7 @@ function ContactG() {
             <TextField
               name="phone"
               label="Phone"
-              value={formValues.phone}
+              value={formData.phone}
               onChange={handleChange}
               required
               inputProps={{
@@ -112,7 +137,7 @@ function ContactG() {
             <TextField
               name="email"
               label="Email"
-              value={formValues.email}
+              value={formData.email}
               onChange={handleChange}
               required
               inputProps={{
@@ -139,7 +164,7 @@ function ContactG() {
             <TextField
               name="message"
               label="Message"
-              value={formValues.message}
+              value={formData.message}
               onChange={handleChange}
               required
               multiline
