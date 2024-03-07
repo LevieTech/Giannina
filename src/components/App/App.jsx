@@ -30,7 +30,7 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          <Redirect exact from="/" to="/home" />
+          <Redirect exact from="/" to="/user" />
           <Route exact path="/home" component={HomePage} />
           <Route exact path="/login">
             {user.id ? (
