@@ -15,7 +15,7 @@ function Nav() {
     <div className="nav">
       <div className="nav-title">
       <Avatar alt="Giannina" src="/images/Giannina.png" />
-        <Link to="/home">
+        <Link to="/user">
           <h2>Coach
             Giannina 
           </h2>

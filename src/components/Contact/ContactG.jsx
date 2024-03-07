@@ -24,7 +24,7 @@ function ContactG() {
     }));
   };
 
- 
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -67,16 +67,16 @@ function ContactG() {
       }}>Ready to take the first step towards a life of purpose, fulfillment, and abundance? Let's embark on this transformative journey together!</h1>
 
 
-<form onSubmit={handleSubmit} style={{
+      <form onSubmit={handleSubmit} style={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         height: '100vh',
-         maxWidth: '1100px',
-         padding: '5px',
-       
-         
+        maxWidth: '1100px',
+        padding: '5px',
+
+
       }}>
         <div>
           <div>
@@ -92,7 +92,7 @@ function ContactG() {
                   fontFamily: "lobster",
                   fontWeight: 'bold',
                   fontSize: '25px',
-                  textShadow:'2px 2px 4px rgba(0, 0, 0, 0.5)' ,
+                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
                 },
               }}
               InputLabelProps={{
@@ -203,6 +203,9 @@ function ContactG() {
 
         </div >
       </form>
+
+
+
     </>
   )
 }
