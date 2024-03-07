@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Button, TextField } from "@mui/material";
-
+import Avatar from '@mui/material/Avatar';
 
 function ContactG() {
   const dispatch = useDispatch();
@@ -200,7 +200,19 @@ function ContactG() {
             }}>
             Submit
           </Button>
-
+          <br></br>
+          <br></br>
+          <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'    }}>
+          <a href="https://calendly.com/gninag/fit-call" target="_blank" rel="noopener noreferrer">
+            <Avatar alt="Giannina" src="/images/Giannina.png" style={{ width: '100px', height: '100px' }}/>
+          </a>
+          <h4 style={{
+            color: '',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+            fontFamily: 'Dancing Script, cursive',
+            textAlign: 'center',
+          }}> Or click on my face to schedule a chat in my calendly!</h4>
+        </div>
         </div >
       </form>
 
