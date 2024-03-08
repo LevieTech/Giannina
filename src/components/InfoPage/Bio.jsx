@@ -50,7 +50,7 @@ function BioPage() {
           <img src="/images/cvla.png" alt="CVLA Logo" className="logo" />
           <img src="/images/lifmvs.jpeg" alt="LIFMVS Logo" className="logo" />
           <img src="/images/sanfran.jpeg" alt="San Francisco Logo" className="logo" />
-          <img src="/images/striope.png" alt="Striope Logo" className="logo" />
+          <img src="/images/stripe.png" alt="Striope Logo" className="logo" />
           <img src="/images/Tides.png" alt="Tides Logo" className="logo" />
           <img src="/images/wells.png" alt="Wells Logo" className="logo" />
           <img src="/images/wingrt.webp" alt="Wingrt Logo" className="logo" />
