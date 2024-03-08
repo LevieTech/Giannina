@@ -56,6 +56,7 @@ function App() {
           <Route exact path="/user" component={UserPage} />
           <Route exact path="/biopage" component={BioPage} />
           <Route exact path="/contactg" component={ContactG} />
+       
   
           <Route>
 
