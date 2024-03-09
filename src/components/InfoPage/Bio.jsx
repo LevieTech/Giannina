@@ -11,6 +11,7 @@ function BioPage() {
         <Typography variant="h4" gutterBottom style={{ fontFamily: 'Dancing Script, cursive' }}>
           About Me
         </Typography>
+        <hr />
         <Typography variant="body1" paragraph style={{ fontFamily: 'lobster' }}>
           Giannina enables others to better serve themselves, expand their possibilities, and act more effectively to better design their future. She is passionate about coaching to the human soul.
         </Typography>
@@ -28,7 +29,7 @@ function BioPage() {
         </Typography>
 
       </section>
-
+      <hr />
       <section className="section">
         <Typography variant="h4" gutterBottom style={{ fontFamily: 'Dancing Script, cursive' }}>
           SPECIALITIES
@@ -48,7 +49,7 @@ function BioPage() {
           Who I've worked with
         </Typography>
         <div className="logos-container">
-          <img src="/images/broad.jpg" alt="Broad Logo" className="logo" />
+          <img src="/images/broad.jpg" alt="Broad Logo" className="logo"/>
           <img src="/images/cvla.png" alt="CVLA Logo" className="logo" />
           <img src="/images/lifmvs.jpeg" alt="LIFMVS Logo" className="logo" />
           <img src="/images/sanfran.jpeg" alt="San Francisco Logo" className="logo" />
