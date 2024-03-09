@@ -10,12 +10,22 @@ import InfoPage from '../InfoPage/Bio';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './App.css';
 import BioPage from '../InfoPage/Bio';
 import ContactG from '../Contact/ContactG';
 
-
+//! Theme for MUI styling
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#26ff00',
+    },
+    secondary: {
+      main: '#C70039'
+    },
+  }
+}); // End theme
 
 function App() {
   const dispatch = useDispatch();
@@ -25,7 +35,9 @@ function App() {
     dispatch({ type: 'FETCH_USER' });
   }, [dispatch]);
 
+  
   return (
+    <ThemeProvider theme={theme}>
     <Router>
       <div>
         <Nav />
@@ -71,6 +83,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </ThemeProvider>
   );
 }
 
