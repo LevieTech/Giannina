@@ -1,27 +1,17 @@
 import React from 'react';
 import { Container, Typography } from '@mui/material';
-import './Bio.css'; 
+import './Bio.css';
 
 function BioPage() {
   return (
     <Container maxWidth="md" className="container">
-      <section className="section">
-        <Typography variant="h4" gutterBottom style={{ fontFamily: 'Dancing Script, cursive' }}>
-          SPECIALIZES IN
-        </Typography>
-        <ul>
-          <li>Emerging Leaders / Leadership Development</li>
-          <li>Health and Well-Being</li>
-          <li>Personal Growth</li>
-          <li>Work-Life Alignment</li>
-        </ul>
-        <hr />
-      </section>
+
 
       <section className="section">
         <Typography variant="h4" gutterBottom style={{ fontFamily: 'Dancing Script, cursive' }}>
-          About Giannina
+          About Me
         </Typography>
+        <hr />
         <Typography variant="body1" paragraph style={{ fontFamily: 'lobster' }}>
           Giannina enables others to better serve themselves, expand their possibilities, and act more effectively to better design their future. She is passionate about coaching to the human soul.
         </Typography>
@@ -37,20 +27,33 @@ function BioPage() {
         <Typography variant="body1" paragraph style={{ fontFamily: 'lobster' }}>
           Giannina holds a Masters Certificate of Organizational Leadership from St. Catherine’s University, MN, and a BS in Finance/Entrepreneurial Studies/Management from Carlson School of Management/U of MN. She is also a Certified Effectiveness Coach from Say Yess! Coaching Academy and has completed training in Dare to Lead by Brene Brown, as well as Team Effectiveness and Change Management Certification.
         </Typography>
-        
+
+      </section>
+      <hr />
+      <section className="section">
+        <Typography variant="h4" gutterBottom style={{ fontFamily: 'Dancing Script, cursive' }}>
+          SPECIALITIES
+        </Typography>
+        <ul>
+          <li>Emerging Leaders / Leadership Development</li>
+          <li>Health and Well-Being</li>
+          <li>Personal Growth</li>
+          <li>Work-Life Alignment</li>
+        </ul>
+        <hr />
       </section>
 
       {/* Logos Section */}
       <section className="logos-section">
-        <Typography variant="h4" gutterBottom>
-          who i worked w 
+        <Typography variant="h4" gutterBottom style={{ fontFamily: 'Dancing Script, cursive' }}>
+          Who I've worked with
         </Typography>
         <div className="logos-container">
-          <img src="/images/broad.jpg" alt="Broad Logo" className="logo" />
+          <img src="/images/broad.jpg" alt="Broad Logo" className="logo"/>
           <img src="/images/cvla.png" alt="CVLA Logo" className="logo" />
           <img src="/images/lifmvs.jpeg" alt="LIFMVS Logo" className="logo" />
           <img src="/images/sanfran.jpeg" alt="San Francisco Logo" className="logo" />
-          <img src="/images/striope.png" alt="Striope Logo" className="logo" />
+          <img src="/images/stripe.png" alt="Striope Logo" className="logo" />
           <img src="/images/Tides.png" alt="Tides Logo" className="logo" />
           <img src="/images/wells.png" alt="Wells Logo" className="logo" />
           <img src="/images/wingrt.webp" alt="Wingrt Logo" className="logo" />
