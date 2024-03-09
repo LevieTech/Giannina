@@ -13,18 +13,22 @@ function Nav() {
 
   return (
     <>
-
-      <center className="title-img" >
+    <div className='nav'>
+       <center>
+      <div className="title-img">
         <Link to="/user">
           <img alt="Giannina" src="/images/G-logo.png" />
         </Link>
-      </center>
+      </div>
+    </center>
+
 
       <div className="nav-links">
         {/* <Link to="/home">Home</Link> */}
-        <Link to="/biopage">Bio</Link>
-        <Link to="/home">Links</Link>
-        <Link to="/contactg">Contact Giannina</Link>
+        <Link className="linkItem" to="/biopage">Bio</Link>
+        <Link className="linkItem" to="/home">Links</Link>
+        <Link className="linkItem" to="/contactg">Contact Giannina</Link>
+      </div>
       </div>
     </>
   );

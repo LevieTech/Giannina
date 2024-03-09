@@ -14,15 +14,16 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './App.css';
 import BioPage from '../InfoPage/Bio';
 import ContactG from '../Contact/ContactG';
+/* color gradient, navy-32506e green-c1ff80 teal-4be6cf */
 
 //! Theme for MUI styling
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#26ff00',
+      main: '#4be6cf',
     },
     secondary: {
-      main: '#C70039'
+      main: '#32506e'
     },
   }
 }); // End theme

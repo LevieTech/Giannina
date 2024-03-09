@@ -8,7 +8,7 @@ function BioPage() {
 
 
       <section className="section">
-        <Typography variant="h4" gutterBottom style={{ fontFamily: 'Dancing Script, cursive' }}>
+        <Typography variant="h4" className="bioH4" gutterBottom style={{ fontFamily: 'Dancing Script, cursive' }}>
           About Me
         </Typography>
         <hr />
@@ -31,7 +31,7 @@ function BioPage() {
       </section>
       <hr />
       <section className="section">
-        <Typography variant="h4" gutterBottom style={{ fontFamily: 'Dancing Script, cursive' }}>
+        <Typography variant="h4" className="bioH4" gutterBottom style={{ fontFamily: 'Dancing Script, cursive' }}>
           SPECIALITIES
         </Typography>
         <ul>
@@ -45,7 +45,7 @@ function BioPage() {
 
       {/* Logos Section */}
       <section className="logos-section">
-        <Typography variant="h4" gutterBottom style={{ fontFamily: 'Dancing Script, cursive' }}>
+        <Typography variant="h4" className="bioH4" gutterBottom style={{ fontFamily: 'Dancing Script, cursive' }}>
           Who I've worked with
         </Typography>
         <div className="logos-container">

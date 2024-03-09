@@ -1,31 +1,41 @@
 import React from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Card, Typography } from '@mui/material';
-
+import './UserPage.css';
 function UserPage() {
-  // this component doesn't do much to start, just renders some user reducer info to the DOM
   const user = useSelector((store) => store.user);
 
-  
+
   return (
     <center>
-    <Card sx={{maxWidth:"70%",}}>
 
-        <Typography variant="h3"> Welcome! </Typography>
+      <Typography variant="h6"> Hi, I'm Giannina Hall!</Typography>
+      <Typography className="animate-text" variant="h4"> Welcome! </Typography>
 
-        <h2 className="App-subtitle">Are you feeling stuck, yearning for
-         more, yet unsure of the path forward? Life often presents 
-         us with challenges, uncertainties, and moments where we 
-         crave growth but aren't quite sure how to navigate it. 
-         It's during these times that having the right guidance 
-         and support can make all the difference! Hi im Giannina 
-         Cochina!
-        </h2>
-             {/* <img className="avatar-image" src="/images/Giannina.png" alt="Giannina" /> */}
+      <div className='photoContainer'>
+        <img height={400}  src="/images/Giannina.png" alt="Giannina Photo" />
+      </div>
 
-     
-    </Card>
+      <hr className='userHr' />
+
+      <h3 className="introCard">Are you feeling stuck, yearning for
+        more, yet unsure of the path forward? <br /> <br />
+
+        Life often presents us with challenges, uncertainties,
+        and moments where we crave growth but aren't quite sure
+        how to navigate it. <br /> <br />
+
+        It's during these times that having
+        the right guidance and support can make all the difference!
+      </h3>
+
+      <hr className='userHr' />
+
+<Typography variant="h4">
+  Available for Lifestyle & Wellness coaching 
+</Typography>
+
     </center>
   );
 }
