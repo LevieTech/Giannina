@@ -24,7 +24,7 @@ function Nav() {
       <div className="nav-links">
         {/* <Link to="/home">Home</Link> */}
         <Link to="/biopage">Bio</Link>
-        <Link to="/home">About</Link>
+        <Link to="/home">Links</Link>
         <Link to="/contactg">Contact Giannina</Link>
       </div>
     </div>
