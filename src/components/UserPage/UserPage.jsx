@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import { useSelector } from 'react-redux';
+import { useHistory } from "react-router-dom";
 import { Card, Typography } from '@mui/material';
 import './UserPage.css';
+
 function UserPage() {
+  let history = useHistory();
   const user = useSelector((store) => store.user);
+  const toContact = () => {history.push('/contactg')}
 
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+}, [])
   return (
     <center>
       <div className='userPage'>
@@ -37,8 +43,8 @@ function UserPage() {
       <Typography variant="h4">
         Available for Lifestyle & Wellness coaching
       </Typography>
-      
-      <button className="btn"> Contact </button>
+
+      <button className="btn" onClick={toContact}> Contact </button>
 
     </center>
   );

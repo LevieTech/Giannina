@@ -17,6 +17,7 @@
 
 .linkItems {
   text-decoration: none;
+  color: black;
 }
 
 .linkItem:hover {
