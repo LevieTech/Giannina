@@ -12,22 +12,25 @@ function Nav() {
   const user = useSelector((store) => store.user);
 
   return (
-    <div className="nav">
-      <div className="nav-title">
-      <Avatar alt="Giannina" src="/images/Giannina.png" />
+    <>
+    <div className='nav'>
+       <center>
+      <div className="title-img">
         <Link to="/user">
-          <h2>Coach
-            Giannina 
-          </h2>
+          <img alt="Giannina" src="/images/G-logo.png" />
         </Link>
       </div>
+    </center>
+
+
       <div className="nav-links">
         {/* <Link to="/home">Home</Link> */}
-        <Link to="/biopage">Bio</Link>
-        <Link to="/home">Links</Link>
-        <Link to="/contactg">Contact Giannina</Link>
+        <Link className="linkItem" to="/biopage">Bio</Link>
+        <Link className="linkItem" to="/home">Links</Link>
+        <Link className="linkItem" to="/contactg">Contact Giannina</Link>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
 

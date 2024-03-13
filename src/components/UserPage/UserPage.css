@@ -1,0 +1,67 @@
+/* color gradient, navy-32506e green-c1ff80 teal-4be6cf */
+
+.introCard {
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.userPage {
+  background-color: #d5e8fb;
+  width: fit-content;
+  padding: 25px;
+  outline-style:groove;
+  outline-color: #32506e;
+  margin-bottom: 35px;
+  
+}
+
+.photoContainer{
+    background-color:#bafbf1;
+    width:fit-content;
+    padding: 10px;
+    display: flex;
+    align-content: flex-end;
+}
+.userHr {
+    background-color: #4be6cf;
+    width: 80%;
+    height: 3px;
+}
+.animate-text {
+    --bg-size: 400%;
+    --color-one: #9cfd34;
+    --color-two: #4be6cf;
+    --color-three: #32506e;
+    font-size: clamp(2rem, 2vmin, 8rem);
+    background: linear-gradient(
+                  90deg,
+                  var(--color-one),
+                  var(--color-two),
+                  var(--color-three),
+                  var(--color-two),
+                  var(--color-one)
+  
+                  ) 0 0 / var(--bg-size) 100%;
+                  color: transparent;
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                  animation: move-bg 8s infinite linear;
+                }
+  
+                @keyframes move-bg {
+                  to {
+                    background-position: var(--bg-size) 0;
+                  }
+                }
+  
+                @media (prefers-reduced-motion: no-preference) {
+    .boujee-text {
+      animation: move-bg 8s linear infinite;
+    }
+    @keyframes move-bg {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+ }
+ 

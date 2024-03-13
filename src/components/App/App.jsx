@@ -10,12 +10,23 @@ import InfoPage from '../InfoPage/Bio';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './App.css';
 import BioPage from '../InfoPage/Bio';
 import ContactG from '../Contact/ContactG';
+/* color gradient, navy-32506e green-c1ff80 teal-4be6cf */
 
-
+//! Theme for MUI styling
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#4be6cf',
+    },
+    secondary: {
+      main: '#32506e'
+    },
+  }
+}); // End theme
 
 function App() {
   const dispatch = useDispatch();
@@ -25,7 +36,9 @@ function App() {
   //   dispatch({ type: 'FETCH_USER' });
   // }, [dispatch]);
 
+  
   return (
+    <ThemeProvider theme={theme}>
     <Router>
       <div>
         <Nav />
@@ -71,6 +84,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </ThemeProvider>
   );
 }
 
