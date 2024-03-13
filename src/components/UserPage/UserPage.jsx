@@ -9,12 +9,14 @@ function UserPage() {
 
   return (
     <center>
+      <div className='userPage'>
+        <Typography variant="h6"> Hi, I'm Giannina Hall!</Typography>
+        <Typography className="animate-text" variant="h4"> Welcome! </Typography>
 
-      <Typography variant="h6"> Hi, I'm Giannina Hall!</Typography>
-      <Typography className="animate-text" variant="h4"> Welcome! </Typography>
+        <div className='photoContainer'>
+          <img height={400} src="/images/Giannina.png" alt="Giannina Photo" />
+        </div>
 
-      <div className='photoContainer'>
-        <img height={400}  src="/images/Giannina.png" alt="Giannina Photo" />
       </div>
 
       <hr className='userHr' />
@@ -32,9 +34,11 @@ function UserPage() {
 
       <hr className='userHr' />
 
-<Typography variant="h4">
-  Available for Lifestyle & Wellness coaching 
-</Typography>
+      <Typography variant="h4">
+        Available for Lifestyle & Wellness coaching
+      </Typography>
+      
+      <button className="btn"> Contact </button>
 
     </center>
   );
