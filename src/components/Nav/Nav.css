@@ -1,43 +1,41 @@
-/* color gradient, navy-32506e green-c1ff80 teal-4be6cf */
-/* !Nav links */
-.nav-links {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  margin-top: 5px;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 1em;
-  align-items: center;
-  font-size: 1.5em;
-  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-  color: black;
-  text-decoration: none;
-}
-
-.linkItems {
-  text-decoration: none;
-  color: black;
-}
-
-.linkItem:hover {
-  color: black;
-  background-color: #d5e8fb;
-  text-decoration: none;
-}
-
-
-
 .nav {
-  background-color: #def8c3;
-  outline-style: groove;
-  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  margin: 0 0 30px;
+  overflow: hidden;
+}
+/* .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 30px;
+  overflow: hidden;
+} */
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  margin: 0 5px;
 }
 
-.title-img {
-  width: 50%;
+.nav h2 {
+  margin: 0;
+  padding-left: 20px; /* Add padding to the left of the title */
+  color: navy;
+  font-family: lobster;
+}
+
+.nav-links {
+  width: 35em;
+  text-align: center;
+  /* margin: .95em; */
+  margin-left: auto;
   display: flex;
-  justify-content: center;
   align-items: center;
-  max-width: 200px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.nav-title {
+  display: flex;
+  align-items: center;
 }

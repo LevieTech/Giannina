@@ -10,7 +10,8 @@ body {
 }
 
 img {
-    max-width: 100%;
+  display: inline-block;
+  max-width: 100%;
 }
 
 /* --------------------------------------------------------------------------------
@@ -24,20 +25,18 @@ Container
 /* --------------------------------------------------------------------------------
 Button
 -------------------------------------------------------------------------------- */
-/* color gradient, navy-32506e green-c1ff80 teal-4be6cf */
 
 .btn {
   display: inline-block;
   padding: 10px 20px;
   border-color: #014041;
   border-width: 1px 1px 3px;
-  border-radius: 1px;
-  background-color: #32506e;
+  border-radius: 4px;
+  background-color: #00acb0;
   color: #f8f8f8;
   font-size: 1.1rem;
   outline: 0;
   cursor: pointer;
-  margin-top: 15px;
 }
 
 .btn_sizeMin {
@@ -56,9 +55,8 @@ Button
 }
 
 .btn:hover {
-  background-color: #def8c3;
+  background-color: #008183;
   text-decoration: none;
-  color: black;
 }
 
 /* This line makes the "Register" and "Login" buttons look like links */
