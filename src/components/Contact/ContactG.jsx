@@ -182,6 +182,7 @@ function ContactG() {
                   required
                   multiline
                   rows={4}
+                  sx ={{ width: '328px'}}
                   inputProps={{
                     style: {
                       color: '#6792DB',
