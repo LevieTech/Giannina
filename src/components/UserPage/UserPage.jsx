@@ -6,7 +6,7 @@ import BioPage from '../InfoPage/Bio';
 import ContactG from '../Contact/ContactG';
 import HomePage from '../HomePage/HomePage';
 import Services from '../Services/Services';
-
+import { Divider } from '@mui/material';
 function UserPage() {
   let history = useHistory();
   const toContact = () => { history.push('/contactg') }
@@ -25,16 +25,19 @@ function UserPage() {
         <img className="avatar-image" src="/images/Giannina.png" alt="Giannina" />
       </header>
       <div id="biopage">
-        <BioPage />
+        <BioPage style={{marginBottom: '20px'  }}/>
       </div>
+      <Divider style={{ marginBottom: '20px' }} />
       <div id="home">
-        <HomePage />
+        <HomePage style={{ marginBottom: '20px' }}/>
       </div>
+      <Divider style={{ marginBottom: '20px' }} />
       <div id="contactg">
-        <ContactG />
+        <ContactG style={{ marginBottom: '20px' }}/>
       </div>
+      <Divider style={{ marginBottom: '20px' }} />
       <div id="services">
-        <Services />
+        <Services style={{ marginBottom: '20px'}}/>
       </div>
 
       {/* Logos Section */}

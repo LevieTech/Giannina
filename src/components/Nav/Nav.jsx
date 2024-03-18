@@ -4,6 +4,7 @@ import LogOutButton from '../LogOutButton/LogOutButton';
 import './Nav.css';
 import { useSelector } from 'react-redux';
 import Avatar from '@mui/material/Avatar';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
 
 
 
@@ -20,9 +21,11 @@ function Nav() {
     <div className="nav">
       <div className="nav-title" onClick={() => scrollToSection('header')}>
       <Avatar alt="Giannina" src="/images/Giannina.png" />
+     <hr/>
+      <WbSunnyIcon fontSize="large" style={{ color: '#DBAD00', filter: "drop-shadow(3px 2px 4px rgba(0, 0, 0, 2.5))", marginLeft: '20px',  }} />
         <Link to="/user">
           <h2>
-            Giannina 
+         Giannina 
           </h2>
         </Link>
       </div>

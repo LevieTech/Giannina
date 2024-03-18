@@ -12,19 +12,19 @@ function BioPage() {
           About Me
         </Typography>
         <hr />
-        <Typography variant="body1" paragraph style={{ fontFamily: 'cursive' }}>
+        <Typography variant="body1" paragraph style={{ fontFamily: 'italic' }}>
           Giannina enables others to better serve themselves, expand their possibilities, and act more effectively to better design their future. She is passionate about coaching to the human soul.
         </Typography>
-        <Typography variant="body1" paragraph style={{ fontFamily: 'cursive' }}>
+        <Typography variant="body1" paragraph style={{ fontFamily: 'italic' }}>
           Giannina is a Certified Effectiveness and Life Coach with over 20 years of experience working at Wells Fargo in various roles including Management, Human Resources, Talent Development, Performance Management, and Leadership Development.
         </Typography>
-        <Typography variant="body1" paragraph style={{ fontFamily: 'cursive' }} >
+        <Typography variant="body1" paragraph style={{ fontFamily: 'italic' }} >
           She has worked with leaders at all levels, from entry-level managers to senior executives, providing coaching and consulting in areas such as Leadership Development, Engagement and Culture, Change Management, Team Effectiveness, Manager Development, and Diversity and Inclusion.
         </Typography>
-        <Typography variant="body1" paragraph style={{ fontFamily: 'cursive' }}>
+        <Typography variant="body1" paragraph style={{ fontFamily: 'italic' }}>
           Giannina specializes in Ontological Coaching, which facilitates profound learning and transformation in one’s “way of being”. She helps individuals achieve their goals by addressing what’s missing in different domains of their lives and assisting them to identify and achieve what they desire.
         </Typography>
-        <Typography variant="body1" paragraph style={{ fontFamily: 'cursive' }}>
+        <Typography variant="body1" paragraph style={{ fontFamily: 'italic' }}>
           Giannina holds a Masters Certificate of Organizational Leadership from St. Catherine’s University, MN, and a BS in Finance/Entrepreneurial Studies/Management from Carlson School of Management/U of MN. She is also a Certified Effectiveness Coach from Say Yess! Coaching Academy and has completed training in Dare to Lead by Brene Brown, as well as Team Effectiveness and Change Management Certification.
         </Typography>
 
