@@ -1,16 +1,22 @@
 import React from 'react';
 import { Container, Typography, Link } from '@mui/material';
 import './HomePage.css';
-
+import FloatingIcon from '../FloatingIcon/FloatingIcon';
 function HomePage() {
   return (
-    <Container maxWidth="md">
     
+    <Container maxWidth="md"style={{ margin: 'auto', padding: '10px',textShadow: '1px 2px 4px rgba(0, 0, 0, 0.5)',
+    fontFamily: 'italic',
+    textAlign: 'center', backgroundColor: '#B4D9BC'}} >
+    <FloatingIcon />
       <br />
       {/* New section */}
       <section className="video-section">
+     
         <center>
-          <Typography variant="h3" gutterBottom>
+          <Typography variant="h3" gutterBottom style={{ margin: 'auto', padding: '10px',textShadow: '1px 2px 4px rgba(0, 0, 0, 0.5)',
+        fontFamily: 'italic',
+        textAlign: 'center', }}>
             My Links
           </Typography>
           <Typography variant="body1" gutterBottom>

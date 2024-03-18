@@ -3,8 +3,7 @@ import { useDispatch } from "react-redux";
 import { Button, TextField } from "@mui/material";
 import Avatar from '@mui/material/Avatar';
 import { Typography, Card } from "@mui/material";
-import { blue } from "@mui/material/colors";
-
+import FloatingIcon from '../FloatingIcon/FloatingIcon';
 function ContactG() {
   const dispatch = useDispatch();
 
@@ -28,7 +27,6 @@ function ContactG() {
       [name]: value,
     }));
   };
-
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -63,17 +61,20 @@ function ContactG() {
   };
 
   return (
-    <>
+    <div style={{ backgroundColor: '#d5e8fb' }} >
       <center>
-        <Typography variant="h6" sx={{ width: '90%', }} >
+      <FloatingIcon />
+        <Typography variant="h6" sx={{ width: '90%',  textShadow: '1px 2px 4px rgba(0, 0, 0, 0.5)',
+        fontFamily: 'italic',
+        textAlign: 'center',fontSize: '30px',}} >
           Ready to take the first step towards
           a life of purpose, fulfillment,
-          and abundance? <br /> <br /> Let's embark on
+          and abundance? <br />  Let's embark on
           this transformative journey together!
         </Typography>
 
         <Card sx={{
-          width: '450px',
+          width: '550px',
           height: 'fit-content',
           boxShadow: 5,
           marginTop: 8,
@@ -85,8 +86,6 @@ function ContactG() {
             justifyContent: 'center',
             maxWidth: '1100px',
             padding: '30px',
-
-
           }}>
             <div>
               <div>
@@ -96,23 +95,27 @@ function ContactG() {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  InputLabelProps={{
+                    shrink: true,
+                    style: {
+                      marginBottom: '20px',
+                      color: '#32506e',
+                      fontFamily: "cursive",
+                      fontWeight: 'bolder',
+                      fontSize: '25px',
+                      textShadow: '1px 1px 2px rgba(0, 0, 0, 2.9)',
+                     width: '82px'
+                    },
+                  }}
                   inputProps={{
                     style: {
                       color: '#32506e',
                       fontFamily: "lobster",
                       fontWeight: 'bold',
                       fontSize: '25px',
-                      width: 300,
+                      width: 400,
                       textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-                    },
-                  }}
-                  InputLabelProps={{
-                    style: {
-                      color: '#32506e',
-                      fontFamily: "Georgia",
-                      fontWeight: 'bolder',
-                      fontSize: '25px',
-                      textShadow: '1px 1px 2px rgba(0, 0, 0, 2.9)'
+                      
                     },
                   }}
                 />
@@ -124,23 +127,25 @@ function ContactG() {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  inputProps={{
-                    style: {
-                      color: '#6792DB',
-                      fontFamily: "Georgia",
-                      fontWeight: 'bolder',
-                      fontSize: '25px',
-                      width: 300,
-                      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
-                    },
-                  }}
                   InputLabelProps={{
+                    shrink: true,
                     style: {
                       color: '#32506e',
-                      fontFamily: "Georgia",
+                      fontFamily: "cursive",
+                      fontSize: '25px',
+                      textShadow: '1px 1px 2px rgba(0, 0, 0, 2.9)',
+                      width: '82px'
+                   
+                    },
+                  }}
+                  inputProps={{
+                    style: {
+                      color: '#32506e',
+                      fontFamily: "cursive",
                       fontWeight: 'bolder',
                       fontSize: '25px',
-                      textShadow: '1px 1px 2px rgba(0, 0, 0, 2.9)'
+                      width: 400,
+                      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
                     },
                   }}
                 />
@@ -152,23 +157,25 @@ function ContactG() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  inputProps={{
-                    style: {
-                      color: '#6792DB',
-                      fontFamily: "Georgia",
-                      fontWeight: 'bolder',
-                      fontSize: '25px',
-                      width: 300,
-                      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
-                    },
-                  }}
                   InputLabelProps={{
+                    shrink: true,
                     style: {
                       color: '#32506e',
-                      fontFamily: "Georgia",
+                      fontFamily: "cursive",
                       fontWeight: 'bolder',
                       fontSize: '25px',
-                      textShadow: '1px 1px 2px rgba(0, 0, 0, 2.9)'
+                      textShadow: '1px 1px 2px rgba(0, 0, 0, 2.9)',
+                      width: '82px'
+                    },
+                  }}
+                  inputProps={{
+                    style: {
+                      color: '#32506e',
+                      fontFamily: "cursive",
+                      fontWeight: 'bolder',
+                      fontSize: '25px',
+                      width: 400,
+                      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
                     },
                   }}
                 />
@@ -181,24 +188,27 @@ function ContactG() {
                   onChange={handleChange}
                   required
                   multiline
-                  rows={4}
-                  inputProps={{
-                    style: {
-                      color: '#6792DB',
-                      fontFamily: "Georgia",
-                      fontWeight: 'bolder',
-                      fontSize: '25px',
-                      width: 300,
-                      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
-                    },
-                  }}
+                  rows={5}
                   InputLabelProps={{
+                    shrink: true,
                     style: {
                       color: '#32506e',
-                      fontFamily: "Georgia",
+                      fontFamily: "cursive",
                       fontWeight: 'bolder',
                       fontSize: '25px',
-                      textShadow: '1px 1px 2px rgba(0, 0, 0, 2.9)'
+                      textShadow: '1px 1px 2px rgba(0, 0, 0, 2.9)',
+                      width: '106px',
+                      height: '100px'
+                    },
+                  }}
+                  inputProps={{
+                    style: {
+                      color: '#32506e',
+                      fontFamily: "cursive",
+                      fontWeight: 'bolder',
+                      fontSize: '25px',
+                      width: 400,
+                      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
                     },
                   }}
                 />
@@ -209,26 +219,27 @@ function ContactG() {
               </button>
 
               <br></br>
-          </div >
-        </form>
+            </div >
+          </form>
         </Card>
 
-        <div style={{ marginTop:20, width:200, backgroundColor:'#d5e8fb', padding:15, }}>
-              <a href="https://calendly.com/gninag/fit-call" target="_blank" rel="noopener noreferrer">
-                <Avatar alt="Giannina's Photo" src="/images/Giannina.png" style={{ width: '100px', height: '100px' }} />
-              </a>
-              <h4 style={{
-                color: 'black',
-                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-                fontFamily: 'inherit',
-                textAlign: 'center',
-              }}> Or click on my face to
-               schedule a chat in my calendly!</h4>
-            </div>
+        <div style={{ marginTop:20, width:200,  padding:15, }}>
+          <a href="https://calendly.com/gninag/fit-call" target="_blank" rel="noopener noreferrer">
+            <Avatar alt="Giannina's Photo" src="/images/Giannina.png" style={{ width: '100px', height: '100px' }} />
+          </a>
+          <h4 style={{
+            color: 'black',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+            fontFamily: 'italic',
+            textAlign: 'center',
+          }}> Or click on my face to
+            schedule a chat in my calendly!</h4>
+        </div>
       </center>
-    </>
-
+    </div>
   )
 }
 
 export default ContactG;
+
+
