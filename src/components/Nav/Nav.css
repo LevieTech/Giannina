@@ -3,36 +3,30 @@
   align-items: center;
   margin: 0 0 30px;
   overflow: hidden;
-}
-/* .nav {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 0 0 30px;
-  overflow: hidden;
-} */
+
+}
 
 .nav a {
   text-decoration: none;
   color: black;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 .nav h2 {
   margin: 0;
   padding-left: 20px; /* Add padding to the left of the title */
   color: navy;
-  font-family: lobster;
+  font-family: cursive;
 }
 
 .nav-links {
   width: 35em;
   text-align: center;
-  /* margin: .95em; */
   margin-left: auto;
   display: flex;
   align-items: center;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'cursive';
 }
 
 .nav-title {

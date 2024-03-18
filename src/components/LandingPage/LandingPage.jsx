@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './LandingPage.css';
-
+import FloatingIcon from '../FloatingIcon/FloatingIcon';
 // CUSTOM COMPONENTS
 import RegisterForm from '../RegisterForm/RegisterForm';
 
@@ -15,6 +15,7 @@ function LandingPage() {
 
   return (
     <div className="container">
+         <FloatingIcon />
       <h2>{heading}</h2>
 
       <div className="grid">

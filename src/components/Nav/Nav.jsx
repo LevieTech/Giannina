@@ -10,22 +10,27 @@ import Avatar from '@mui/material/Avatar';
 
 function Nav() {
   const user = useSelector((store) => store.user);
-
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="nav">
-      <div className="nav-title">
+      <div className="nav-title" onClick={() => scrollToSection('header')}>
       <Avatar alt="Giannina" src="/images/Giannina.png" />
         <Link to="/user">
-          <h2>Coach
+          <h2>
             Giannina 
           </h2>
         </Link>
       </div>
       <div className="nav-links">
         {/* <Link to="/home">Home</Link> */}
-        <Link to="/biopage">Bio</Link>
-        <Link to="/home">Links</Link>
-        <Link to="/contactg">Contact Giannina</Link>
+        <p onClick={() => scrollToSection('biopage')}>Meet Giannina</p>
+        <p onClick={() => scrollToSection('home')}style={{ marginLeft: '20px', marginRight: '20px' }}>Links</p>
+        <p onClick={() => scrollToSection('contactg')}>Contact Giannina</p>
       </div>
     </div>
   );

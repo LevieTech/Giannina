@@ -1,14 +1,16 @@
 import React from 'react';
 import { Container, Typography, Link } from '@mui/material';
 import './HomePage.css';
-
+import FloatingIcon from '../FloatingIcon/FloatingIcon';
 function HomePage() {
   return (
-    <Container maxWidth="md">
     
+    <Container maxWidth="md">
+    <FloatingIcon />
       <br />
       {/* New section */}
       <section className="video-section">
+     
         <center>
           <Typography variant="h3" gutterBottom>
             My Links
