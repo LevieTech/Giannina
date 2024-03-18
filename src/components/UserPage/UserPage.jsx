@@ -5,7 +5,7 @@ import FloatingIcon from '../FloatingIcon/FloatingIcon';
 import BioPage from '../InfoPage/Bio';
 import ContactG from '../Contact/ContactG';
 import HomePage from '../HomePage/HomePage';
-
+import Services from '../Services/Services';
 
 function UserPage() {
   let history = useHistory();
@@ -33,6 +33,10 @@ function UserPage() {
       <div id="contactg">
         <ContactG />
       </div>
+      <div id="services">
+        <Services />
+      </div>
+
       {/* Logos Section */}
       <section className="logos-section">
         

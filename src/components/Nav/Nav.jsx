@@ -31,6 +31,7 @@ function Nav() {
         <p onClick={() => scrollToSection('biopage')}>Meet Giannina</p>
         <p onClick={() => scrollToSection('home')}style={{ marginLeft: '20px', marginRight: '20px' }}>Links</p>
         <p onClick={() => scrollToSection('contactg')}>Contact Giannina</p>
+        <p onClick={() => scrollToSection('services')}style={{ marginLeft: '20px', marginRight: '20px' }}>Services</p>
       </div>
     </div>
   );

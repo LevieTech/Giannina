@@ -30,19 +30,7 @@ function BioPage() {
 
       </section>
       <hr />
-      <section className="section">
-        <Typography variant="h4" gutterBottom style={{ fontFamily: 'italic' }}>
-          SPECIALITIES
-        </Typography>
-        <ul>
-          <li>Emerging Leaders / Leadership Development</li>
-          <li>Health and Well-Being</li>
-          <li>Personal Growth</li>
-          <li>Work-Life Alignment</li>
-        </ul>
-        <hr />
-      </section>
-
+      
       
     </Container>
   );
