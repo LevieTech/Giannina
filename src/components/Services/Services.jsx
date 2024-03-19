@@ -8,7 +8,7 @@ function Services() {
       <Box textAlign="center">
         <FloatingIcon />
         <section className="section" style={{ maxWidth: '400px' }}>
-          <Typography variant="h6" sx={{ width: '90%',  textShadow: '1px 2px 4px rgba(0, 0, 0, 0.5)',
+          <Typography variant="h5" sx={{ width: '90%',  textShadow: '1px 2px 4px rgba(0, 0, 0, 0.5)',
         fontFamily: 'italic',
         textAlign: 'center',fontSize: '30px',}}>
             Specialties and Coaching Services I Offer:

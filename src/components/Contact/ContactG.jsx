@@ -4,6 +4,8 @@ import { Button, TextField } from "@mui/material";
 import Avatar from '@mui/material/Avatar';
 import { Typography, Card } from "@mui/material";
 import FloatingIcon from '../FloatingIcon/FloatingIcon';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
+
 function ContactG() {
   const dispatch = useDispatch();
 
@@ -59,14 +61,24 @@ function ContactG() {
       setErrorMessage("An unexpected error occurred. Please try again later."); // Display a generic error message
     }
   };
+  const handleHover = (e) => {
+    e.target.style.transform = 'translateY(-2px)'; // Move the image slightly up on hover
+  };
+
+  const handleHoverOut = (e) => {
+    e.target.style.transform = 'translateY(0)'; // Reset transform on hover out
+  };
 
   return (
     <div style={{ backgroundColor: '#d5e8fb' }} >
       <center>
-      <FloatingIcon />
-        <Typography variant="h6" sx={{ width: '90%',  textShadow: '1px 2px 4px rgba(0, 0, 0, 0.5)',
-        fontFamily: 'italic',
-        textAlign: 'center',fontSize: '30px',}} >
+        <FloatingIcon /> <WbSunnyIcon style={{ color: '#DBAD00', filter: "drop-shadow(3px 2px 4px rgba(0, 0, 0, 2.5))", marginLeft: '20px', marginTop: 40, fontSize: '80px' }} />
+
+        <Typography variant="h6" sx={{
+          width: '90%', textShadow: '1px 2px 4px rgba(0, 0, 0, 0.5)',
+          fontFamily: 'italic',
+          textAlign: 'center', fontSize: '30px', marginTop: 5,
+        }} >
           Ready to take the first step towards
           a life of purpose, fulfillment,
           and abundance? <br />  Let's embark on
@@ -104,7 +116,7 @@ function ContactG() {
                       fontWeight: 'bolder',
                       fontSize: '25px',
                       textShadow: '1px 1px 2px rgba(0, 0, 0, 2.9)',
-                     width: '82px'
+                      width: '82px'
                     },
                   }}
                   inputProps={{
@@ -115,7 +127,7 @@ function ContactG() {
                       fontSize: '25px',
                       width: 400,
                       textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-                      
+
                     },
                   }}
                 />
@@ -135,7 +147,7 @@ function ContactG() {
                       fontSize: '25px',
                       textShadow: '1px 1px 2px rgba(0, 0, 0, 2.9)',
                       width: '82px'
-                   
+
                     },
                   }}
                   inputProps={{
@@ -223,15 +235,19 @@ function ContactG() {
           </form>
         </Card>
 
-        <div style={{ marginTop:20, width:200,  padding:15, }}>
+        <div style={{ marginTop: 20, width: 200, padding: 15, }}>
           <a href="https://calendly.com/gninag/fit-call" target="_blank" rel="noopener noreferrer">
-            <Avatar alt="Giannina's Photo" src="/images/Giannina.png" style={{ width: '100px', height: '100px' }} />
+            <Avatar alt="Giannina's Photo" src="/images/Giannina.png" style={{ width: '200px', height: '200px' }} onMouseEnter={handleHover}
+            onMouseLeave={handleHoverOut}
+            />
+
           </a>
           <h4 style={{
             color: 'black',
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
             fontFamily: 'italic',
             textAlign: 'center',
+            width: '400px'
           }}> Or click on my face to
             schedule a chat in my calendly!</h4>
         </div>

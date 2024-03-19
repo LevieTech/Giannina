@@ -6,7 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function HomePage() {
   const imageSize = {
-    width: '250px', // Adjust width as needed
+    width: '240px', // Adjust width as needed
     height: 'auto', // Maintain aspect ratio
     margin: '0 20px', // Add margin between the images
     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)', // Shadow effect
@@ -47,10 +47,10 @@ function HomePage() {
             My Links
           </Typography>
           <Typography variant="body1" gutterBottom>
-            Coaching page info: <Link href="https://www.a-plancoaching.com/coach/giannina-hall/">https://www.a-plancoaching.com/coach/giannina-hall/</Link>
+            Coaching pages and Links 
           </Typography>
           <Typography variant="body1">
-            You can also watch a short video about myself!
+            You can watch a short video about myself!
           </Typography>
           <br />
           {/* LinkedIn Link */}
@@ -86,9 +86,30 @@ function HomePage() {
                 onMouseLeave={handleHoverOut} // Reset on mouse leave
               />
             </Link>
+
+            {/* <Link href="https://www.a-plancoaching.com/coach/giannina-hall/">
+              <img
+                src="/images/Aplan.png"
+                alt="Aplan"
+                className="button-image"
+                style={imageSize}
+                onMouseEnter={handleHover} // Apply hover effect on mouse enter
+                onMouseLeave={handleHoverOut} // Reset on mouse leave
+              />
+            </Link> */}
+            <Link href="https://www.coachranks.com/confidence-coach/giannina-hall">
+              <img
+                src="/images/GHall.png"
+                alt="Aplan"
+                className="button-image"
+                style={imageSize}
+                onMouseEnter={handleHover} // Apply hover effect on mouse enter
+                onMouseLeave={handleHoverOut} // Reset on mouse leave
+              />
+            </Link>
           </div>
 
-          <iframe src="https://iplayerhd.com/player/video/ccf6398a-9518-4d61-871f-4f1ae03773f5" width="800" height="450"></iframe>
+          <iframe src="https://iplayerhd.com/player/video/ccf6398a-9518-4d61-871f-4f1ae03773f5" width="600" height="450"></iframe>
         </center>
       </section>
     </Container>
