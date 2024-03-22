@@ -4,7 +4,7 @@ import './Bio.css';
 import FloatingIcon from '../FloatingIcon/FloatingIcon';
 function BioPage() {
   return (
-    <Container maxWidth="md" className="container">
+    <Container maxWidth="md" className="container" style={{ backgroundColor: '#DCD1B6' }}>
 <FloatingIcon />
 
       <section className="section" >
